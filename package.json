@@ -2,14 +2,15 @@
   "name": "csvtogr",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon index.js"
+    "dev" : "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Working express like backend framework",
   "dependencies": {
     "nodemon": "^3.1.9",
     "qs": "^6.13.1",
