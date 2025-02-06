@@ -1,4 +1,5 @@
 import { App } from "../src/framework/app.js";
+import { errorHandler, bodyParser } from "./framework/middleware.js";
 const app = new App();
 
 app.use((req, res, next) => {
@@ -26,6 +27,10 @@ app.post("/data", (req, res) => {
   res.writeHead(200, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ message: "Data received!" }));
 });
+
+app.use(errorHandler)
+
+
 
 // Start the server
 app.listen(3000, () => {
